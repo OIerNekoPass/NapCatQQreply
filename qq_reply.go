@@ -14,7 +14,7 @@ func Set_url(ip string, port string) {
 	url = "http://" + ip + ":" + port + "/send_group_msg"
 }
 
-fun Set_token(new_token string) {
+func Set_token(new_token string) {
 	bot_token = new_token
 }
 
