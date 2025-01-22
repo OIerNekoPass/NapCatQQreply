@@ -7,11 +7,11 @@ import (
 	"io/ioutil"
 )
 
-var url = "http://127.0.0.0:11451"
+var url = "http://127.0.0.0:11451/send_group_msg"
 var bot_token = "bot_token"
 
-func Set_url(new_url string, port string) {
-	url = new_url + ":" + new_port + "/send_group_msg"
+func Set_url(ip string, port string) {
+	url = "http://" + ip + ":" + port + "/send_group_msg"
 }
 
 fun Set_token(new_token string) {
