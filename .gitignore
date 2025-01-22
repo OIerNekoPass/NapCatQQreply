@@ -1,0 +1,16 @@
+# Go binary
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go object files
+*.a
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Go build output
+bin/
