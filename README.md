@@ -2,9 +2,9 @@
 
 使用NapCat的HTTP服务器功能进行消息的回复
 
-默认往127.0.0.1:1145发送消息，token默认为bot_token
+默认往127.0.0.1:11451发送消息，token默认为bot_token
 
-使用`Set_url(ip string, port string)`设置url和端口，例如`Set_url("127.0.0.1", "1145")`
+使用`Set_url(ip string, port string)`设置url和端口，例如`Set_url("127.0.0.1", "11451")`
 
 使用`Set_token(new_token string)`设置token
 
