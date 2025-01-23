@@ -5,6 +5,7 @@ import (
 	"strings"
 	"net/http"
 	"io/ioutil"
+	"encoding/json"
 )
 
 var url = "http://127.0.0.0:11451/send_group_msg"
@@ -14,7 +15,7 @@ func Set_url(ip string, port string) {
 	url = "http://" + ip + ":" + port + "/send_group_msg"
 }
 
-fun Set_token(new_token string) {
+func Set_token(new_token string) {
 	bot_token = new_token
 }
 
@@ -46,7 +47,7 @@ func send_payload(payload *strings.Reader) {
 }
 
 func Group_text(group_id string, text string) {
-	text = strings.ReplaceAll(text, "\n", `\n`)
+	text = json.Marshal(text)
 	payload := strings.NewReader(`{
 	"group_id": "` + group_id + `",
 	"message": [
