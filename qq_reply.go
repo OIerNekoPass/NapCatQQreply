@@ -47,14 +47,18 @@ func send_payload(payload *strings.Reader) {
 }
 
 func Group_text(group_id string, text string) {
-	text = json.Marshal(text)
+	str, err := json.Marshal(text)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 	payload := strings.NewReader(`{
 	"group_id": "` + group_id + `",
 	"message": [
 		{
 			"type": "text",
 			"data": {
-				"text": "` + text + `"
+				"text": ` + text + `
 			}
 		}
 	]
